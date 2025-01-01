@@ -21,9 +21,11 @@ namespace Console.Test.Benchmark;
 [EnumGenerator]
 public enum UserType
 {
-    [Display(Name = "مرد", Description = "men")] Men,
+    [Display(Name = "مرد", Description = "men")] 
+    Men,
 
-    [Display(Name = "زن", Description = "women")] Women,
+    [Display(Name = "زن", Description = "women")] 
+    Women,
 
     //[Display(Name = "نامشخص")]
     None
@@ -98,6 +100,14 @@ public class EnumBenchmark
     }
 
     [Benchmark]
+    public string FastToDisplayExpression()
+    {
+        return UserType.Men.ToDisplayExpression();
+    }
+
+
+
+    [Benchmark]
     public string NativeToDescription()
     {
         return UserType.Men.ToDescriptionNative();
@@ -108,6 +118,14 @@ public class EnumBenchmark
     {
         return UserType.Men.ToDescriptionFast();
     }
+
+
+    [Benchmark]
+    public string FastToDescriptionExpression()
+    {
+        return UserType.Men.ToDescriptionExpression();
+    }
+
 
     [Benchmark]
     public UserType[] NativeGetValues()

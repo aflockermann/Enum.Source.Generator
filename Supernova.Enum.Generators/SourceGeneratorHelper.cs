@@ -7,7 +7,9 @@ public static class SourceGeneratorHelper
     public const string ExtensionMethodNameToString = "ToStringFast";
     public const string ExtensionMethodNameIsDefined = "IsDefinedFast";
     public const string ExtensionMethodNameToDisplay = "ToDisplayFast";
+    public const string ExtensionMethodNameToDisplay2 = "ToDisplayExpression";
     public const string ExtensionMethodNameToDescription = "ToDescriptionFast";
+    public const string ExtensionMethodNameToDescription2 = "ToDescriptionExpression";
     public const string ExtensionMethodNameGetValues = "GetValuesFast";
     public const string ExtensionMethodNameGetNames = "GetNamesFast";
     public const string ExtensionMethodNameGetLength = "GetLengthFast";

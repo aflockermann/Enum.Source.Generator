@@ -69,6 +69,18 @@ public class EnumGeneratorTest
         menString.Should().Be("Descمرد");
     }
 
+
+    [TestMethod]
+    public void TestEnumToDescriptionExpression()
+    {
+        var menString = UserTypeTest.Men.ToDescriptionExpression();
+
+        menString.Should().Be("Descمرد");
+    }
+
+
+
+
     [TestMethod]
     public void TestEnumToDescription_Undefined()
     {
@@ -92,6 +104,16 @@ public class EnumGeneratorTest
 
         Assert.AreEqual("مرد", menString);
     }
+
+    [TestMethod]
+    public void TestEnumToDisplayExpression()
+    {
+        var menString = UserTypeTest.Men.ToDisplayExpression();
+
+        Assert.AreEqual("مرد", menString);
+    }
+
+
 
     [TestMethod]
     public void TestEnumToDisplayNone()
